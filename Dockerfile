@@ -11,5 +11,5 @@ COPY --from=build /go/src/github.com/zricethezav/gitleaks/bin/* /usr/bin/
 USER gitleaks
 
 RUN git config --global --add safe.directory '*'
-
+RUN speep 10
 ENTRYPOINT ["gitleaks"]
